@@ -1,0 +1,140 @@
+:root{
+    --charcoal-color: #383F43;
+}
+
+html, body{
+    min-width: 1189px;
+}
+/* header */
+
+header h1{
+    color:whitesmoke;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    margin: 36px;
+}
+
+/* section_main contents */
+.main_contents .intro{
+    padding: 0 100px;
+    position: relative;
+}
+
+.main_contents .intro .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main_contents .intro .container ul > li:first-child{
+    width: 80px;
+    margin: 0 100px;
+}
+
+.main_contents .intro .container:nth-child(2){
+    height: 280px;
+}
+
+.main_contents .intro .container:last-child ul .planets{
+    margin: 0 100px;
+}
+
+.main_contents .intro .container .comments{
+    margin: 10px;
+    padding: 8px;
+    background-color: rgba(248, 248, 248, 0.5);
+    border-radius: 6px;
+    display: inline-block;
+    max-width: 310px;
+    max-height: 80px;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.main_contents .intro .container #main_comments{
+    transform: translateY(80%);
+    position: absolute;
+    left: 10%;
+}
+
+.main_contents .intro .planets:hover:not(#selfie){
+    transform: scale(1.1) rotate(10deg);
+}
+
+.main_contents .intro .planets:hover+.comments{
+    opacity: 1;
+}
+
+.main_contents .intro #selfie:hover{
+    box-shadow: 0px 0px 70px rgb(82, 78, 78);
+}
+
+.main_contents .intro .container ul .planets img{
+    width: 80px;
+    height: 80px;
+    transform: rotate(-15deg);
+    margin-bottom: 10px;
+}
+
+.main_contents .intro #selfie{
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 100px rgb(85, 85, 85);
+    animation: rotate_img 20s linear infinite;
+    transform-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    /* position: absolute;
+    left: 570px; */
+}
+
+@keyframes rotate_img{ /* 360도 무한회전 */
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* footer */
+
+footer{
+    color:whitesmoke;
+    position: relative;
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    bottom: 22px;
+}
+
+footer .container span{
+    line-height: 40px;
+}
+footer ul {
+    display: flex;
+}
+footer ul li{
+    margin: 0 0 0 16px;
+}
+footer ul li a{
+    font-size: 30px;
+    color:whitesmoke;
+}
+
+/* @media (max-width: 768px){
+    .main_contents .intro .container ul > li{
+        background-color: red;
+        margin: 0;
+    }
+    .main_contents .intro .container ul > li img{
+        width: 10px;
+        height: 10px;
+        border: 2px solid white;
+    }
+
+} */
